@@ -64,6 +64,14 @@
       border-radius: 5px;
       cursor: pointer;
     }
+    .account-details {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #856404;
+    }
     footer {
       background-color: #222;
       color: white;
@@ -71,6 +79,11 @@
       padding: 20px;
     }
   </style>
+  <script>
+    function showPaymentDetails(plan) {
+      alert("You selected the " + plan + " plan.\n\nSend the exact amount to:\n\nAccount Name: Raphael Ezema\nAccount Number: 8025720735\nBank: OPay\n\nOnce paid, your dashboard will automatically reflect your deposit within 5 minutes.");
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -79,7 +92,7 @@
   </header>  <nav>
     <a href="#plans">Plans</a>
     <a href="#about">About</a>
-    <a href="#contact">+2348025720735</a>
+    <a href="#contact">Contact</a>
     <a href="#login">Login</a>
   </nav>  <section class="hero">
     <h2>Choose an Investment Plan That Suits You</h2>
@@ -91,7 +104,13 @@
       <p><strong>Daily Return:</strong> ₦500</p>
       <p><strong>Duration:</strong> 30 Days</p>
       <p><strong>Total:</strong> ₦15,000</p>
-      <button>Invest Now</button>
+      <div class="account-details">
+        Pay to:<br />
+        Account Name: Raphael Ezema<br />
+        Account Number: 8025720735<br />
+        Bank: OPay
+      </div>
+      <button onclick="showPaymentDetails('Starter')">I Have Paid</button>
     </div>
     <div class="plan">
       <h3>Silver Plan</h3>
@@ -99,7 +118,13 @@
       <p><strong>Daily Return:</strong> ₦900</p>
       <p><strong>Duration:</strong> 30 Days</p>
       <p><strong>Total:</strong> ₦27,000</p>
-      <button>Invest Now</button>
+      <div class="account-details">
+        Pay to:<br />
+        Account Name: Raphael Ezema<br />
+        Account Number: 8025720735<br />
+        Bank: OPay
+      </div>
+      <button onclick="showPaymentDetails('Silver')">I Have Paid</button>
     </div>
     <div class="plan">
       <h3>Gold Plan</h3>
@@ -107,14 +132,20 @@
       <p><strong>Daily Return:</strong> ₦2,000</p>
       <p><strong>Duration:</strong> 30 Days</p>
       <p><strong>Total:</strong> ₦60,000</p>
-      <button>Invest Now</button>
+      <div class="account-details">
+        Pay to:<br />
+        Account Name: Raphael Ezema<br />
+        Account Number: 8025720735<br />
+        Bank: OPay
+      </div>
+      <button onclick="showPaymentDetails('Gold')">I Have Paid</button>
     </div>
   </section>  <section id="about" style="padding: 40px 20px; background-color: #fff; text-align: center;">
     <h2>About NairaProfit</h2>
     <p>NairaProfit is a digital investment platform that allows Nigerians to grow their money by choosing from safe and high-return plans. Daily earnings are auto-credited to your wallet and can be withdrawn anytime.</p>
   </section>  <section id="contact" style="padding: 40px 20px; background-color: #f9f9f9; text-align: center;">
     <h2>Contact Us</h2>
-    <p>Need help? Chat with us on WhatsApp or email support@nairaprofit.ng</p>
+    <p>Need help? Call or WhatsApp us at <strong>+2348025720735</strong> or email support@nairaprofit.ng</p>
   </section>  <footer>
     &copy; 2025 NairaProfit. All rights reserved.
   </footer>
